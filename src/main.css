@@ -1,0 +1,374 @@
+/* Main styling */
+/* Fonts */
+@font-face {
+  font-family: poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+/* ? Css variables */
+:root {
+  /* * Color variables */
+  --white: #fff;
+  --light: rgb(155, 155, 155);
+  --dark: #252525;
+  --black: #000;
+
+  /* * Variables for media queries sizes */
+  --container-width-large: 100%;
+  --container-width-medium: 85%;
+  --container-width-small: 95%;
+
+  /* * Font Variables */
+  --main-font: "poppins", sans-serif;
+
+  /* * Transition variables */
+  --main-transition: all 0.4s ease-in-out;
+}
+
+/* * Global styling */
+html {
+  /* Smooth scroll on webpage */
+  scroll-behavior: smooth;
+}
+
+/* Turn off the scrollbar on the webpage */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Overall styling for all element*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--background-color);
+  line-height: 1.7;
+}
+
+/* ? General Styles */
+.container {
+  width: var(--container-width-large);
+  margin: 0 auto;
+}
+
+/* Header Styles */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* sementic elements */
+
+.text-light {
+  color: var(--light);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+  border-bottom: 1px solid var(--light);
+}
+
+nav > article {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > article li {
+  padding: 0 1em;
+}
+
+nav > article li a {
+  height: 5em;
+}
+
+nav > .more li a {
+  color: var(--black);
+}
+
+.active {
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
+}
+
+.logo {
+  object-fit: cover;
+  height: 3.5em;
+  width: auto;
+}
+
+.hero > img {
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.hero-CTA {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.hero-CTA a {
+  margin-top: 2em;
+}
+
+/* Styling for buttons */
+.button {
+  width: max-content;
+  display: inline-block;
+  color: var(--white);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--white);
+  transition: var(--main-transition);
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--black);
+  border-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.college-look {
+  margin: 60px;
+}
+
+.cl-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.cl-color {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  background: #dda976;
+}
+
+.cl-picture {
+  width: 100%;
+  height: 100%;
+}
+
+.cl-small {
+  margin: 0px 0px 0px 125px;
+}
+.cl-large {
+  font-size: 40px;
+  margin: 0px 0px 0px 125px;
+}
+
+.cl-button {
+  margin: 0px 0px 0px 125px;
+  width: 300px;
+  background-color: var(--white);
+  border: none;
+  color: black;
+  padding: 15px 62px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.ft-container {
+  margin: 50px 50px 50px 150px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px 20px;
+}
+
+.ft-small {
+  color: rgb(183, 182, 182);
+  font-size: 14px;
+}
+
+/* product card styling */
+.product__section {
+  margin: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 1rem;
+  margin-top: 4rem;
+  padding: 5.5em;
+}
+
+.product__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: var(--main-transition);
+}
+
+.product__card:hover {
+  transform: translateY(-0.5em);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product__card img {
+  height: 15em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.prodct__info {
+  color: var(--black);
+}
+
+.jewelry {
+  background-image: url(./assets/img/Jewelry-hero.jpg);
+  width: 100%;
+  height: 75vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-container {
+  text-align: center;
+  max-width: 60%;
+  color: var(--white);
+}
+
+.text-container h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.text-container p {
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--black);
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* ? Media Queries to make website responsive */
+
+/* Medium devices (Tablet etc.) */
+@media screen and (max-width: 1024px) {
+  /* Styling set different if above size is met */
+  .container {
+    width: var(--container-width-medium);
+  }
+
+  .section {
+    margin-top: 6rem;
+  }
+}
+
+/* Small devices (Smartphone etc.) */
+@media screen and (max-width: 600px) {
+  /* Styling set different if above size is met */
+  .container {
+    width: var(--container-width-small);
+  }
+
+  .section > h2 {
+    margin-bottom: 2rem;
+  }
+
+  /* Product cards */
+  .product__section {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    padding-inline: 5px;
+  }
+
+  /* Men Section */
+  .hero > img {
+    height: 50vh;
+  }
+
+  .college-look {
+    margin: 10px 0;
+  }
+
+  .cl-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cl-large {
+    margin: 0;
+    padding: 0 5px;
+    max-width: 100%;
+  }
+
+  .cl-button {
+    margin: 0;
+  }
+
+  /* Jewelry section */
+  .jewelry {
+    height: 50vh;
+  }
+
+  li,
+  .more,
+  .logo {
+    display: none;
+  }
+}
